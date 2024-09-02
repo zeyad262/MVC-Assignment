@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS  -->
+    <link href="~/lib/bootstrap/css/bootstrap.css" rel="stylesheet" />
+
+    <title>@ViewBag.Title</title>
+
+    <style>
+        nav{
+            display:flex;
+            justify-content:center;
+            gap:20px;
+            margin-block: 20px;
+        }
+        nav a{
+            background-color: black;
+            color:white;
+            border-radius:12px;
+            font-size: 20px;
+            padding :10px;
+            text-decoration: none;
+        }
+        footer{
+            position: fixed;
+            bottom: 0;
+            left:50%;
+           transform : translate(-50%);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <center>
+            <a href="/Home/Index" class="text-center btn-success">Home</a>
+            <a href="/Home/about" class="text-center btn-success">about</a>
+            <a href="/Home/contact" class="text-center btn-success">contact</a>
+            <a href="/Home/privacy" class="text-center btn-success">privacy</a>
+
+
+            <a href="/Account/Login" class="text-center btn-success">Login</a>
+            <a href="/Account/Register" class="text-center btn-success">Register</a>
+        </center>
+    </nav>
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <center>
+            <p>
+                All CopyRights Receives @DateTime.Now.Year
+            </p>
+        </center>
+    </footer>
+</body>
+</html>
